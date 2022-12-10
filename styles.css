@@ -6,7 +6,7 @@
 
 
 /** -------------------------------- I- index.html-----------------------------#ff0000 */
-/*? -------------------------------- 1) header  -------------------------------#ff0000 */
+/*? -------------------------------- 1) header -------------------------------#ff0000 */
 :root {
     --bg-color: #0a192f;
     --text-color: #fff;
@@ -161,7 +161,7 @@ header {
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     padding: 1.25rem 1.75rem;
     margin: 80px auto 0px;
 }
@@ -174,11 +174,13 @@ header {
     margin: 0;
     color: #fff;
 }
+
 .counter-container i {
     color: var(--main-color);
     font-size: 50px;
     margin-right: 7px;
 }
+
 .counter-container {
     margin: 30px 50px;
     text-align: center;
