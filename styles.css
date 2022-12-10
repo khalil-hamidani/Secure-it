@@ -1,6 +1,7 @@
 /* ----- table of content ----- */
 /** ---- I- index.html -------- */
 /*? 1) header */
+/*? 2) first container  */
 /* ---------------------------- */
 
 
@@ -9,7 +10,7 @@
 :root {
     --bg-color: #0a192f;
     --text-color: #fff;
-    --main-color: #64ffda ;
+    --main-color: #64ffda;
 }
 
 * {
@@ -22,12 +23,12 @@
 }
 
 body {
-    min-height: 100vh;
     background: var(--bg-color);
     color: var(--text-color);
 }
 
 header {
+    z-index: 1;
     position: fixed;
     width: 100%;
     top: 0;
@@ -36,7 +37,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: var(--bg-color);
-    padding: 28px 12%;
+    padding: 15px 10%;
     transition: all .50s ease;
 }
 
@@ -45,10 +46,10 @@ header {
     align-items: center;
 }
 
-.logo i {
-    color: var(--main-color);
+.logo img {
     font-size: 28px;
-    margin-right: 3px;
+    margin: 0;
+    margin-right: 6px;
 }
 
 .logo span {
@@ -107,3 +108,85 @@ header {
     color: var(--main-color);
 }
 
+/*? -------------------------------- 2) first container -----------------------#ff0000 */
+.firstContainer {
+    background-image: linear-gradient(rgba(100, 255, 219, 0.122), rgba(0, 0, 0, 0.122)), url(img/main.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0 0;
+    padding: 0;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: rgb(0, 0, 0) solid 2px;
+}
+
+.firstContainer h1 {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    font-size: 5rem;
+    margin: auto;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.firstContainer p {
+    border-radius: 25px;
+    padding: 25px;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    margin: auto auto;
+    text-shadow: 5px 5px 5px #000000;
+    font-size: 30px;
+
+}
+
+.firstContainer button {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    top: 30%;
+    margin: auto;
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    padding: 1.25rem 1.75rem;
+    margin: 80px auto 0px;
+}
+
+/*? -------------------------------- 2) third container -----------------------#ff0000 */
+.thirdContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #fff;
+}
+.counter-container i {
+    color: var(--main-color);
+    font-size: 50px;
+    margin-right: 7px;
+}
+.counter-container {
+    margin: 30px 50px;
+    text-align: center;
+
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+
+}
