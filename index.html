@@ -5,30 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Secure it</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <a href="index.html" class="logo">
-            <img src="img/logo.png" alt="Logo" width="80">
+            <img src="static/img/logo.png" alt="Logo" width="80">
             <span>Secure it</span></a>
         <ul class="navbar">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Encryption</a></li>
+            <li><a href="#">Decryption</a></li>
+            <li><a href="passwordsGen.html">Password Generator</a></li>
+            <li><a href="passwordsGen.html">Password manager</a></li>
         </ul>
         <div class="main">
-            <a href="signin.html" class="user"><i class="ri-user-fill"></i>Sign In</a>
+            <a href="login.html" class="user"><i class="ri-user-fill"></i>Log In</a>
             <a href="register.html" class="user"><i class="ri-user-add-fill"></i>Register</a>
         </div>
     </header>
@@ -82,26 +83,18 @@
     </div>
     <div class="thirdContainer">
         <div class="counter-container">
-            <i class="ri-key-fill"></i>
+            <!-- <i class="ri-key-fill"></i> -->
             <div class="counter" data-target="200000000"></div>
             <span>2 billion passwords leaks in 2021</span>
         </div>
         <div class="counter-container">
-            <!-- <i class="fab fa-youtube fa-3x"></i>
-            <div class="counter" data-target="1200"></div>
-            <span>daily password leaks</span> -->
             <p>Over 2 billion data records containing usernames and passwords were compromised in 2021, an increase of 35% from 2020,
                 according to ForgeRock.</p>
             <p>This personal information can be sold on the dark web and result in identity theft. Identity fraud losses totaled $52 billion
                 in 2021</p>
         </div>
-        <!-- <div class="counter-container">
-            <i class="fab fa-facebook fa-3x"></i>
-            <div class="counter" data-target="1200"></div>
-            <span>daily password leaks</span>
-        </div> -->
     </div>
-    <script src="scripts/app.js"></script>
+    <script src="static/scripts/app.js"></script>
 </body>
 
 </html>
