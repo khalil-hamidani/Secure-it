@@ -6,7 +6,6 @@ const numbersEl = document.getElementById("numbers");
 const symbolsEl = document.getElementById("symbols");
 const generateEl = document.getElementById("generate");
 const clipboardEl = document.getElementById("clipboard");
-
 const randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
@@ -20,7 +19,10 @@ clipboardEl.addEventListener("click", () => {
     return;
   }
   navigator.clipboard.writeText(password).then(() => {
-    alert("Password copied to clipboard!");
+    clipboardEl.innerHTML = `<i id="icon" class="fa fa-clipboard-check"></i>`;
+    setTimeout(function () {
+      clipboardEl.innerHTML = `<i id="icon" class="fa fa-clipboard"></i>`;
+    }, 1000);
   });
 });
 
