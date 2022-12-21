@@ -215,7 +215,8 @@ header {
 /*! -------------------------------- I- passwordsGen.html-----------------------------#ff0000 */
 /*? -------------------------------- 1) main container -------------------------------#1100ff */
 #passwordsGen {
-    background-color: #112240ef;
+    /* background-color: #112240ef; */
+    background: url(/static/img/passgen.png), #112240ef;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -493,4 +494,20 @@ a {
 
 .Encryption-output-result-container textarea::placeholder {
     color: rgb(0, 0, 0);
+}
+
+/*! -------------------------------- I- Deccryption.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) input container -------------------------------#1100ff */
+#Decryption {
+    background: url(../img/decryption.png), #112240ef;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
 }

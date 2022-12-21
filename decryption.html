@@ -17,15 +17,15 @@
 
 </head>
 
-<body id="Encryption">
+<body id="Decryption">
     <header>
         <a href="index.html" class="logo">
             <img src="static/img/logo.png" alt="Logo" width="80">
             <span>Secure it</span></a>
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
-            <li><a href="encryption.html" class="active">Encryption</a></li>
-            <li><a href="decryption.html">Decryption</a></li>
+            <li><a href="encryption.html" >Encryption</a></li>
+            <li><a href="decryption.html" class="active">Decryption</a></li>
             <li><a href="passwordsGen.html">Password Generator</a></li>
             <li><a href="">Password manager</a></li>
         </ul>
@@ -35,10 +35,10 @@
         </div>
     </header>
     <div class="Encryption-container ">
-        <h2>📝 Text Encryptor <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank"><small style="font-size: 20px;">
+        <h2>📝 Text Decryptor <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank"><small style="font-size: 20px;">
                     --Using caesar cipher--</small></a> </h2>
         <div class="Encryption-result-container">
-            <textarea  placeholder="Enter your Plaintext here ..." id="plaintxt" autofocus cols="150" rows="10"></textarea>
+            <textarea  placeholder="Enter your CipherText here ..." id="plaintxt" autofocus cols="150" rows="10"></textarea>
         </div>
         <div class="settings">
             <div class="setting">
@@ -47,27 +47,27 @@
             </div>
         </div>
         <button class="btn btn-large" id="generate">
-            Encrypt Text 🛠️</i>
+            Decrypt Text 🛠️</i>
         </button>
 
     </div>
 
     <div class="Encryption-output-container disabled">
-        <h2>Text Encrypted Successfully ✅</h2>
+        <h2>Text Decrypted Successfully ✅</h2>
         <div class="Encryption-output-result-container">
             <textarea disabled id="cipher" cols="150"
                 rows="18"></textarea>
         </div>
         <button class="btn btn-small" style="width: 380px; margin-top: 10px ; margin-bottom:10px; " id="back">
-            Back to Encryption 🛠️</i>
+            Back to Decryption 🛠️</i>
         </button>
         <button class="btn btn-small" style="width: 380px; margin-left: 15px" id="copy">
-            Copy CipherText 📝</i>
+            Copy Plaintext Text 📝</i>
         </button>
 
     </div>
 
-    <script src="static/scripts/encryption.js"></script>
+    <script src="static/scripts/decryption.js"></script>
 </body>
 </body>
 
