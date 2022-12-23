@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
 /* ----- table of content ----- */
-/* ----------------------------#000 */
 /*! ---- I- index.html -------- */
 /*? 1) header */
 /*? 2) first container  */
-/* ----------------------------#000 */
 /*! ---- II- passwordsGen.html -------- */
 /* ? 1) main container */
-/* ----------------------------#000 */
 /*! ---- III- Encryption.html -------- */
 /* ? 1) input container */
-/* ? 1) output container */
-/* ----------------------------#000 */
+/* ? 2) output container */
 /*! ---- IV- Decryption.html -------- */
-/* ? 1) input container */
-/* ? 1) output container */
-/* ----------------------------#000 */
+/* ? 1) body */
 /*! ---- IV- PasswoedMan.html -------- */
 /* ? 1)  */
 
@@ -128,7 +122,7 @@ header {
 
 /*? -------------------------------- 2) first container -----------------------#1100ff */
 .firstContainer {
-    background-image: linear-gradient(rgba(100, 255, 219, 0.122), rgba(0, 0, 0, 0.122)), url(../img/main.jpg);
+    background-image: /*linear-gradient(rgba(100, 255, 219, 0.1), rgba(100, 255, 219, 0.4), rgba(100, 255, 219, 0.1)),*/ url(../img/main.jpg);
     background-repeat: no-repeat;
     height: 100vh;
     margin: 0 0;
@@ -148,6 +142,7 @@ header {
     font-size: 5rem;
     margin: auto;
     text-shadow: 5px 5px 5px #000000;
+    color: white;
 }
 
 .firstContainer p {
@@ -212,7 +207,7 @@ header {
 }
 
 
-/*! -------------------------------- I- passwordsGen.html-----------------------------#ff0000 */
+/*! -------------------------------- II- passwordsGen.html-----------------------------#ff0000 */
 /*? -------------------------------- 1) main container -------------------------------#1100ff */
 #passwordsGen {
     /* background-color: #112240ef; */
@@ -393,7 +388,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-/*! -------------------------------- I- Encryption.html-----------------------------#ff0000 */
+/*! -------------------------------- III- Encryption.html-----------------------------#ff0000 */
 /*? -------------------------------- 1) input container -------------------------------#1100ff */
 #Encryption {
     background: url(../img/Encryption.png), #112240ef;
@@ -453,7 +448,7 @@ a {
     border-color: #000000;
 }
 
-/*? -------------------------------- 1) output container -------------------------------#1100ff */
+/*? -------------------------------- 2) output container -------------------------------#1100ff */
 .disabled {
     display: none;
 }
@@ -496,8 +491,8 @@ a {
     color: rgb(0, 0, 0);
 }
 
-/*! -------------------------------- I- Deccryption.html-----------------------------#ff0000 */
-/*? -------------------------------- 1) input container -------------------------------#1100ff */
+/*! -------------------------------- IV- Deccryption.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) body -------------------------------#1100ff */
 #Decryption {
     background: url(../img/decryption.png), #112240ef;
     background-repeat: no-repeat;

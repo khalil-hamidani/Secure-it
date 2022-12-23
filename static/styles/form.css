@@ -3,15 +3,38 @@
 :root {
     --bg-color: #0a192f;
     --text-color: #fff;
-    --main-color: #64ffda;
+    --main-color: hsl(166, 100%, 70%);
 }
 
-body {
-    background: rgba(10, 25, 47, 0.99);
+#login {
+    background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 15px;
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-left: 470px;
 }
+#register {
+    background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px;
+    margin-top: 100px;
+    margin-left: 470px;
+}
+h1{
+    color: white;
+    text-shadow: 0px 1px 1px rgb(0, 0, 0);
+    position: absolute;
+    font-family: 'Source Sans Pro';
+    left: 120px;
+    top: 20%;
+    font-size: 55px;
+    align-items: center;
+    justify-content: center;
 
+    max-width: 550px;
+}
 .login-form,
 .login-form * {
     box-sizing: border-box;
@@ -19,17 +42,17 @@ body {
 }
 
 .login-form {
-    top: 50px;
+    top: 50px !important;
     max-width: 350px;
     margin: 0 auto;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .login-form__logo-container {
     padding: 30px;
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--bg-color);
 }
 
 .login-form__logo {
