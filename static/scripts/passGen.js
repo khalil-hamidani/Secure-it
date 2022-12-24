@@ -27,13 +27,25 @@ clipboardEl.addEventListener("click", () => {
 });
 
 generateEl.addEventListener("click", () => {
-  const length = +lengthEl.value;
-  const hasLower = lowercaseEl.checked;
-  const hasUpper = uppercaseEl.checked;
-  const hasNumber = numbersEl.checked;
-  const hasSymbol = symbolsEl.checked;
+  if (lengthEl.value == 106) {
+    generateEl.innerText = "Gaaay";
+    setTimeout(function () {
+      generateEl.innerText = "Generate Password 🛠️🔐";
+    }, 500);
+  } else if (lengthEl.value > 100) {
+    generateEl.innerText = "Password Length must be less than 100 character";
+    setTimeout(function () {
+      generateEl.innerText = "Generate Password 🛠️🔐";
+    }, 2000);
+  } else {
+    const length = +lengthEl.value;
+    const hasLower = lowercaseEl.checked;
+    const hasUpper = uppercaseEl.checked;
+    const hasNumber = numbersEl.checked;
+    const hasSymbol = symbolsEl.checked;
 
-  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+  }
 });
 
 function generatePassword(lower, upper, number, symbol, length) {

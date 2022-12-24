@@ -14,3 +14,34 @@ counters.forEach((counter) => {
   };
   updateCounter();
 });
+
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+const compareContainer = document.querySelector(".compareContainer");
+left.addEventListener("mouseenter", () => {
+  compareContainer.classList.add("hover-left");
+});
+left.addEventListener("mouseleave", () => {
+  compareContainer.classList.remove("hover-left");
+});
+
+right.addEventListener("mouseenter", () => {
+  compareContainer.classList.add("hover-right");
+});
+right.addEventListener("mouseleave", () => {
+  compareContainer.classList.remove("hover-right");
+});
+
+
+$("yes").on("mousedown", function(){
+  timeout = setInterval(function(){
+          var cs = $("body").scrollTop();
+          $("body").scrollTop(cs+1)
+  }, 10);  // <--- Change this value to speed up/slow down scrolling
+
+  return false;
+});
+$("yes").on("mouseup", function(){
+  clearInterval(timeout);
+  return false;
+});
