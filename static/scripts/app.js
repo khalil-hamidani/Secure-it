@@ -31,17 +31,3 @@ right.addEventListener("mouseenter", () => {
 right.addEventListener("mouseleave", () => {
   compareContainer.classList.remove("hover-right");
 });
-
-
-$("yes").on("mousedown", function(){
-  timeout = setInterval(function(){
-          var cs = $("body").scrollTop();
-          $("body").scrollTop(cs+1)
-  }, 10);  // <--- Change this value to speed up/slow down scrolling
-
-  return false;
-});
-$("yes").on("mouseup", function(){
-  clearInterval(timeout);
-  return false;
-});
