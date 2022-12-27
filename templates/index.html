@@ -1,94 +1,67 @@
-<!DOCTYPE html>
-<html>
+{% extends "template.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Secure it</title>
-    <link rel="stylesheet" type="text/css" href="static/styles/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-</head>
+{% block title %}Secure iT{% endblock %}
 
-<body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="static/img/logo.png" alt="Logo" width="80">
-            <span>Secure iT</span></a>
-        <ul class="navbar">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="encryption.html">Encryption</a></li>
-            <li><a href="decryption.html">Decryption</a></li>
-            <li><a href="passwordsGen.html">Password Generator</a></li>
-            <li><a href="">Password manager</a></li>
-        </ul>
-        <div class="main">
-            <a href="login.html" class="user"><i class="ri-user-fill"></i>Log In</a>
-            <a href="register.html" class="user"><i class="ri-user-add-fill"></i>Register</a>
-        </div>
-    </header>
+{% block id %}{% endblock %}
 
-    <div class="firstContainer">
-        
-        <h1>Welcome to <span>Secure iT</span> </h1>
-        <h1> Our state-of-the-art cybersecurity web application!</h1>
-        <h2>At Secure iT, we understand the importance of <span class="important">protecting</span> your online <span
-                class="important">accounts</span> and <span class="important">data</span>, which is
-            why we have developed a range of tools and features to help you do just that. </h2>
-        <a href="#goto" class="scroll" id="yes">start now</a>
-        <button id="goto"></button>
-    </div>
-    <div class="SecondContainer">
-        <h1>What are the tools and features we provid in Secure iT ?</h1>
-        <p>One of the main features of Secure iT is our <SPan>Encryption</SPan> and <span>Decryption</span> tool. Encryption is the process
-            of converting
-            plaintext
-            (readable) data into a scrambled, unreadable form known as ciphertext. This is done using a specific algorithm, such as the
-            <SPan>Caesar cipher</SPan>, which we use in our application. Decryption is the reverse process, converting ciphertext back into
-            plaintext.
-        </p>
-        <p>Our encryption and decryption tool allows you to easily encrypt and decrypt messages using the Caesar cipher algorithm. Simply
-            enter your message and choose whether you want to encrypt or decrypt it. The tool will then perform the relevant operation,
-            converting the message into the desired form. <SPan class="important">This can be useful for sending sensitive information
-                securely over the internet</SPan>,
-            as it makes it difficult for unauthorized parties to read the message.</p>
-    </div>
+{% block main %}
 
-    <div class="compareContainer">
-        <div class="split left">
-            <h1 class="h1explore"><span>En</span>cryption</h1>
-            <a class="explore leftex" href="encryption.html">Explore Now</a>
-        </div>
-        <div class="split right">
-            <h1 class="h1explore h"><span id="sec">De</span>cryption</h1>
-            <a class="explore rightex" href="decryption.html">Explore Now</a>
-        </div>
-    </div>
+<div class="firstContainer">
+  <h1>Welcome to <span>Secure iT</span></h1>
+  <h1>Our state-of-the-art cybersecurity web application!</h1>
+  <h2>
+    At Secure iT, we understand the importance of <span class="important">protecting</span> your online <span class="important">accounts</span> and
+    <span class="important">data</span>, which is why we have developed a range of tools and features to help you do just that.
+  </h2>
+  <a href="#goto" class="scroll" id="yes">start now</a>
+  <button id="goto"></button>
+</div>
+<div class="SecondContainer">
+  <h1>What are the tools and features we provid in Secure iT ?</h1>
+  <p>
+    One of the main features of Secure iT is our <span>Encryption</span> and <span>Decryption</span> tool. Encryption is the process of converting plaintext
+    (readable) data into a scrambled, unreadable form known as ciphertext. This is done using a specific algorithm, such as the <span>Caesar cipher</span>,
+    which we use in our application. Decryption is the reverse process, converting ciphertext back into plaintext.
+  </p>
+  <p>
+    Our encryption and decryption tool allows you to easily encrypt and decrypt messages using the Caesar cipher algorithm. Simply enter your message and choose
+    whether you want to encrypt or decrypt it. The tool will then perform the relevant operation, converting the message into the desired form.
+    <span class="important">This can be useful for sending sensitive information securely over the internet</span>, as it makes it difficult for unauthorized
+    parties to read the message.
+  </p>
+</div>
 
-    <div class="FrourthContainer" id="passwordgen">
-        <h1> <span>Password Generator</span> is good</h1>
-        <p>In addition to our encryption and decryption tool, we also offer a password generator that helps you create <SPan
-                class="important">strong</SPan> and <SPan class="important">unique</SPan>
-            passwords for your various online accounts. This is important because <SPan class="important">weak</SPan> or
-            <SPan class="important">common</SPan> passwords are easy for <SPan class="important">hackers to guess</SPan>, making it easier for them to gain access to your
-            accounts.</p>
-        <a href="passwordsGen.html">Explore Now</a>
-    </div>
+<div class="compareContainer">
+  <div class="split left">
+    <h1 class="h1explore"><span>En</span>cryption</h1>
+    <a class="explore leftex" href="/encryption">Explore Now</a>
+  </div>
+  <div class="split right">
+    <h1 class="h1explore h"><span id="sec">De</span>cryption</h1>
+    <a class="explore rightex" href="/decryption">Explore Now</a>
+  </div>
+</div>
 
-    <div class="FifthContainer" id="passwordman">
-        <h1> No need to <span>Remember </span> your Passwords</h1>
-        <p>we also offer a <SPan class="important">password manager</SPan> thats allows you to store all your passwords in <SPan class="important">one secure location</SPan>, so you
-            don't have to remember them all. You can access your passwords from any device with an internet connection, simply by logging in
-            to your Secure iT account.</p>
-        <a href="passmanager.html">Explore Now</a>
-    </div>
-    <script src="static/scripts/app.js"></script>
-</body>
+<div class="FrourthContainer" id="passwordgen">
+  <h1><span>Password Generator</span> is good</h1>
+  <p>
+    In addition to our encryption and decryption tool, we also offer a password generator that helps you create <span class="important">strong</span> and
+    <span class="important">unique</span> passwords for your various online accounts. This is important because <span class="important">weak</span> or
+    <span class="important">common</span> passwords are easy for <span class="important">hackers to guess</span>, making it easier for them to gain access to
+    your accounts.
+  </p>
+  <a href="/passwordGen">Explore Now</a>
+</div>
 
-</html>
+<div class="FifthContainer" id="passwordman">
+  <h1>No need to <span>Remember </span> your Passwords</h1>
+  <p>
+    we also offer a <span class="important">password manager</span> thats allows you to store all your passwords in
+    <span class="important">one secure location</span>, so you don't have to remember them all. You can access your passwords from any device with an internet
+    connection, simply by logging in to your Secure iT account.
+  </p>
+  <a href="/passwordMan">Explore Now</a>
+</div>
+<script src="/static/scripts/app.js"></script>
+
+{% endblock %}

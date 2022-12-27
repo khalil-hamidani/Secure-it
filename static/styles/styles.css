@@ -6,7 +6,9 @@
 /*? 1) header */
 /*? 2) first container  */
 /*? 3) second container  */
-/*? 4) third container  */
+/*? 4) compar container  */
+/*? 5) fourth container  */
+/*? 6) fifth container  */
 /*! ---- II- passwordsGen.html -------- */
 /* ? 1) main container */
 /*! ---- III- Encryption.html -------- */
@@ -16,7 +18,7 @@
 /* ? 1) body */
 /*! ---- IV- PasswoedMan.html -------- */
 /* ? 1)  */
-
+/*! ---- IV- Form.html -------- */
 
 /*! -------------------------------- I- index.html-----------------------------#ff0000 */
 /*? -------------------------------- 1) header -------------------------------#1100ff */
@@ -221,12 +223,14 @@ header {
     color: #000000;
     border: 1px solid #000000;
 }
-#goto{
+
+#goto {
     z-index: -1;
     position: absolute;
     top: 90.3%;
     right: 100px;
 }
+
 /*? -------------------------------- 3) second container -----------------------#1100ff */
 .SecondContainer {
     background-image: url(/static/img/2container.png);
@@ -257,9 +261,11 @@ header {
     padding: 10px 40px;
     padding-top: 20px;
 }
-.SecondContainer p:last-child{
+
+.SecondContainer p:last-child {
     padding-top: 30px;
 }
+
 .SecondContainer span {
     color: #64ffda;
     text-shadow: 5px 5px 5px #000000;
@@ -278,14 +284,17 @@ header {
     height: 100vh;
     background: #333;
 }
-.compareContainer span{
+
+.compareContainer span {
     color: #64ffda;
     text-shadow: 5px 5px 5px #000000;
 }
-.compareContainer span#sec{
+
+.compareContainer span#sec {
     color: rgb(200, 0, 0);
     text-shadow: 5px 5px 5px #000000;
 }
+
 .h1explore {
     font-size: 4rem;
     color: white;
@@ -480,7 +489,7 @@ header {
 }
 
 .FifthContainer h1 {
-    
+
     text-align: center;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -841,4 +850,122 @@ a {
     height: 100vh;
     padding: 10px;
     margin: 0;
+}
+
+/*! -------------------------------- IV- Form.html-----------------------------#ff0000 */
+#login {
+    background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px;
+    margin-top: 100px;
+    margin-left: 470px;
+}
+
+#register {
+    background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px;
+    margin-top: 100px;
+    margin-left: 470px;
+}
+
+#form {
+    color: white;
+    text-shadow: 0px 1px 1px rgb(0, 0, 0);
+    position: absolute;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    left: 120px;
+    top: 20%;
+    font-size: 55px;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 550px;
+}
+
+.login-form,
+.login-form * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro';
+}
+
+.login-form {
+    top: 50px !important;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.login-form__logo-container {
+    padding: 30px;
+    background: var(--bg-color);
+}
+
+.login-form__logo {
+    display: block;
+    max-width: 125px;
+    margin: 0 auto;
+}
+
+.login-form__content {
+    padding: 30px;
+    background: #eeeeee;
+}
+
+.login-form__header {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+.login-form__input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.login-form__input:focus {
+    border-color: var(--bg-color);
+}
+
+.login-form__input::placeholder {
+    color: #aaaaaa;
+}
+
+.login-form__button {
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background: var(--bg-color);
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form__button:active {
+    background: #64ffda;
+    color: #000000;
+}
+
+.login-form__links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-form__link {
+    font-size: 0.9em;
+    color: #008067;
+    text-decoration: none;
 }
