@@ -28,10 +28,17 @@
         <li><a href="/passwordGen">Password Generator</a></li>
         <li><a href="">Password manager</a></li>
       </ul>
+      {% if session["user_id"] %}
       <div class="main">
-        <a href="/login" class="user"><i class="ri-user-fill"></i>Log In</a>
+        <a href="/" class="user"><i class="ri-account-box-fill"></i>name</a>
+        <a href="/logout" class="user"><i class="ri-logout-box-r-fill"></i>Log out</a>
+      </div>
+      {% else %}
+      <div class="main">
+        <a href="/login" class="user"><i class="ri-user-fill"></i>Log in</a>
         <a href="/register" class="user"><i class="ri-user-add-fill"></i>Register</a>
       </div>
+      {% endif %}
     </header>
     {% endif %}
     {% block main %} {% endblock %}
