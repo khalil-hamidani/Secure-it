@@ -1,4 +1,4 @@
 .vscode
-flask
 __pycache__
-idea.png
+flask
+flask_session
