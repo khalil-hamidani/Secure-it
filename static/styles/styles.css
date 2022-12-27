@@ -40,6 +40,7 @@
     font-family: 'Source Sans Pro';
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -220,11 +221,16 @@ header {
     color: #000000;
     border: 1px solid #000000;
 }
-
+#goto{
+    z-index: -1;
+    position: absolute;
+    top: 90.3%;
+    right: 100px;
+}
 /*? -------------------------------- 3) second container -----------------------#1100ff */
 .SecondContainer {
     background-image: url(/static/img/2container.png);
-    height: 75vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
@@ -232,7 +238,7 @@ header {
 
 .SecondContainer h1 {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 65px;
     padding-bottom: 20px;
     font-size: 30px;
     font-size: 2.5rem;
@@ -243,20 +249,25 @@ header {
 
 .SecondContainer p {
     text-align: center;
-    line-height: 40px;
+    line-height: 42px;
     position: relative;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     font-size: 29px;
     font-weight: bold;
     padding: 10px 40px;
+    padding-top: 20px;
 }
-
+.SecondContainer p:last-child{
+    padding-top: 30px;
+}
 .SecondContainer span {
     color: #64ffda;
+    text-shadow: 5px 5px 5px #000000;
 }
 
 .SecondContainer span.important {
     color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
 }
 
 /*? -------------------------------- 4) compare container -----------------------#1100ff */
@@ -269,9 +280,11 @@ header {
 }
 .compareContainer span{
     color: #64ffda;
+    text-shadow: 5px 5px 5px #000000;
 }
 .compareContainer span#sec{
     color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
 }
 .h1explore {
     font-size: 4rem;
@@ -389,7 +402,7 @@ header {
 /*? -------------------------------- 5) fourth container -----------------------#1100ff */
 #passwordgen {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3)), url(../img/encryptionkey.jpg);
-    height: 60vh;
+    height: 55vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -407,7 +420,6 @@ header {
 
 .FrourthContainer p {
     text-align: center;
-
     line-height: 45px;
     position: relative;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -422,6 +434,7 @@ header {
 
 .FrourthContainer span.important {
     color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
 }
 
 .FrourthContainer a {
@@ -433,7 +446,7 @@ header {
     align-items: center;
     justify-content: center;
     left: 42%;
-    top: 318%;
+    top: 330%;
     text-decoration: none !important;
     font-weight: bold;
     border-radius: 25px 10px 25px 10px;
@@ -460,7 +473,7 @@ header {
 /*? -------------------------------- 6) Fifth Container -----------------------#1100ff */
 #passwordman {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3)), url(../img/passman.png);
-    height: 60vh;
+    height: 58vh;
     background-repeat: no-repeat;
     background-size: cover;
     border-top: #000000 3px solid;
@@ -481,7 +494,6 @@ header {
 
 .FifthContainer p {
     text-align: center;
-
     line-height: 45px;
     position: relative;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -496,6 +508,7 @@ header {
 
 .FifthContainer span.important {
     color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
 }
 
 .FifthContainer a {
@@ -504,10 +517,9 @@ header {
     cursor: pointer;
     position: absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
     left: 42%;
-    top: 380%;
+    top: 387%;
     text-decoration: none !important;
     font-weight: bold;
     border-radius: 25px 10px 25px 10px;
@@ -715,7 +727,7 @@ input[type=number]::-webkit-inner-spin-button {
 /*! -------------------------------- III- Encryption.html-----------------------------#ff0000 */
 /*? -------------------------------- 1) input container -------------------------------#1100ff */
 #Encryption {
-    background: url(../img/Encryption.png), #112240ef;
+    background: url(../img/encryption.png), #081c3a;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -731,7 +743,7 @@ input[type=number]::-webkit-inner-spin-button {
 .Encryption-container {
     margin-left: 50px;
     background-color: var(--bg-color);
-    box-shadow: 0px 2px 10px rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
     padding: 10px;
     width: 800px;
     font-size: 25px;

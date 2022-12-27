@@ -12,7 +12,7 @@ const randomFunc = {
   number: getRandomNumber,
   symbol: getRandomSymbol,
 };
-
+resultEl.innerText = "Click to generate password"
 clipboardEl.addEventListener("click", () => {
   const password = resultEl.innerText;
   if (!password) {
@@ -28,7 +28,7 @@ clipboardEl.addEventListener("click", () => {
 
 generateEl.addEventListener("click", () => {
   if (lengthEl.value == 106) {
-    generateEl.innerText = "Gaaay";
+    generateEl.innerText = "🤨🤨🤨";
     setTimeout(function () {
       generateEl.innerText = "Generate Password 🛠️🔐";
     }, 500);
