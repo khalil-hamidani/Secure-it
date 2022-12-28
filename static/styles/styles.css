@@ -1,0 +1,1069 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ----- table of content ----- */
+/*! ---- I- index.html -------- */
+/*? 1) header */
+/*? 2) first container  */
+/*? 3) second container  */
+/*? 4) compar container  */
+/*? 5) fourth container  */
+/*? 6) fifth container  */
+/*! ---- II- passwordsGen.html -------- */
+/* ? 1) main container */
+/*! ---- III- Encryption.html -------- */
+/* ? 1) input container */
+/* ? 2) output container */
+/*! ---- IV- Decryption.html -------- */
+/* ? 1) body */
+/*! ---- V- Form.html -------- */
+/*! ---- VI- PasswoedMan.html -------- */
+
+/*! -------------------------------- I- index.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) header -------------------------------#1100ff */
+:root {
+    --bg-color: #0a192f;
+    --sec-color: #0b1932;
+    --text-color: #fff;
+    --main-color: #64ffda;
+
+    --left-bg-color: rgba(10, 25, 47, 0.55);
+    --right-bg-color: rgba(10, 25, 47, 0.55);
+    --hover-width: 60%;
+    --other-width: 40%;
+    --speed: 850ms
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color);
+    padding: 15px 5%;
+    transition: all .50s ease;
+    border-bottom: #000000 1px solid;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    font-size: 28px;
+    margin: 0;
+    margin-right: 6px;
+}
+
+.logo span {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 20px !important;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    font-size: 20px !important;
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+/*? -------------------------------- 2) first container -----------------------#1100ff */
+.firstContainer {
+    background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/main2.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0 0;
+    padding: 0;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: rgb(0, 0, 0) solid 2px;
+}
+
+.firstContainer h1:first-child {
+    font-size: 50px;
+}
+
+.firstContainer h1 {
+    position: relative;
+    font-family: 'Montserrat';
+    z-index: 0;
+    text-align: center;
+    top: 29%;
+    font-size: 2rem;
+    margin: auto;
+    margin-bottom: 25px;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+}
+
+.firstContainer span {
+    color: #64ffda;
+    text-shadow: 5px 5px 5px #000000;
+    font-family: "Montserrat";
+}
+
+.firstContainer span.important {
+    color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.firstContainer h2 {
+    font-family: 'Source Sans Pro';
+    padding: 0px;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    top: 30%;
+    margin: auto auto;
+    text-shadow: 5px 5px 5px #000000;
+    font-size: 30px;
+    max-width: 900px;
+
+}
+
+.scroll {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid #64ffda;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.75rem;
+    width: 15rem;
+    padding: 0.5rem;
+    background-color: var(--sec-color);
+
+}
+
+.scroll:hover {
+    background-color: #64ffda;
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+.scroll:active {
+    background-color: #64ffdba1;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+#goto {
+    z-index: -1;
+    position: absolute;
+    top: 90.3%;
+    right: 100px;
+}
+
+/*? -------------------------------- 3) second container -----------------------#1100ff */
+.SecondContainer {
+    background-image: url(/static/img/2container.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+.SecondContainer h1 {
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-size: 2.5rem;
+    margin: auto;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+}
+
+.SecondContainer p {
+    text-align: center;
+    line-height: 42px;
+    position: relative;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 29px;
+    font-weight: bold;
+    padding: 10px 40px;
+    padding-top: 20px;
+}
+
+.SecondContainer p:last-child {
+    padding-top: 30px;
+}
+
+.SecondContainer span {
+    color: #64ffda;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.SecondContainer span.important {
+    color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
+}
+
+/*? -------------------------------- 4) compare container -----------------------#1100ff */
+.compareContainer {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+}
+
+.compareContainer span {
+    color: #64ffda;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.compareContainer span#sec {
+    color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.h1explore {
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    text-shadow: 1px 1px 10px #000000;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.explore {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.75rem;
+    width: 15rem;
+    padding: 0.5rem;
+    background-color: var(--sec-color);
+    border: #64ffda 1px solid;
+}
+
+
+.explore.leftex:hover {
+    color: white;
+    background-color: var(--main-color);
+    border: var(--bg-color) 1px solid;
+    color: var(--bg-color);
+}
+
+.explore.rightex:hover {
+    color: white;
+    background-color: var(--main-color);
+    border: var(--bg-color) 1px solid;
+    color: var(--bg-color);
+}
+
+.split {
+    display: block !important;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    border: black 1.8px solid;
+}
+
+.split.left {
+    display: block !important;
+    background: url(/static/img/split1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.split.left::before {
+    content: "";
+    display: block !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+
+}
+
+.split.right {
+    display: block !important;
+    right: 0;
+    background: url(/static/img/split2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    display: block !important;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+    display: block !important;
+    transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+/*? -------------------------------- 5) fourth container -----------------------#1100ff */
+#passwordgen {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3)), url(../img/encryptionkey.jpg);
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.FrourthContainer h1 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-size: 2.5rem;
+    margin: auto;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+}
+
+.FrourthContainer p {
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 29px;
+    font-weight: bold;
+    padding: 10px 40px;
+}
+
+.FrourthContainer span {
+    color: #64ffda;
+}
+
+.FrourthContainer span.important {
+    color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.FrourthContainer a {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid #64ffda;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 42%;
+    top: 330%;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.75rem;
+    width: 15rem;
+    padding: 0.5rem;
+    background-color: var(--sec-color);
+}
+
+.FrourthContainer a:hover {
+    background-color: #64ffda;
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+.FrourthContainer a:active {
+    background-color: #64ffdba1;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/*? -------------------------------- 6) Fifth Container -----------------------#1100ff */
+#passwordman {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3)), url(../img/passman.png);
+    height: 58vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: #000000 3px solid;
+}
+
+.FifthContainer h1 {
+
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-size: 2.5rem;
+    margin: auto;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+    margin-top: 20px;
+}
+
+.FifthContainer p {
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 29px;
+    font-weight: bold;
+    padding: 10px 40px;
+}
+
+.FifthContainer span {
+    color: #64ffda;
+}
+
+.FifthContainer span.important {
+    color: rgb(200, 0, 0);
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.FifthContainer a {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid #64ffda;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 42%;
+    top: 387%;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.75rem;
+    width: 15rem;
+    padding: 0.5rem;
+    background-color: var(--sec-color);
+}
+
+.FifthContainer a:hover {
+    background-color: #64ffda;
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+.FifthContainer a:active {
+    background-color: #64ffdba1;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/*! -------------------------------- II- passwordsGen.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) main container -------------------------------#1100ff */
+#passwordsGen {
+    background: url(/static/img/passgen.png), #112240ef;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+}
+
+h2 {
+    margin: 10px 0 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.container {
+    background-color: var(--bg-color);
+    box-shadow: 0px 2px 10px rgb(0, 0, 0);
+    padding: 20px;
+    width: 600px;
+    max-width: 100%;
+    font-size: 25px;
+}
+
+.result-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding: 12px 10px;
+    height: 65px;
+    width: 100%;
+}
+
+.result-container #result {
+    word-wrap: break-word;
+    max-width: calc(100% - 40px);
+    overflow-y: scroll;
+    height: 100%;
+}
+
+#result::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.result-container .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 45px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.btn {
+    border: none;
+    background-color: var(--main-color);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.btn-large {
+    display: block;
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#length {
+    width: 60px;
+    height: 30px;
+    padding: 10px;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 20px !important;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.toggler-wrapper {
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked + .toggler-slider {
+    background-color: var(--main-color);
+}
+
+.toggler-wrapper .toggler-slider {
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-2 {
+    width: 67.5px;
+}
+
+.toggler-wrapper.style-2 input[type="checkbox"]:checked + .toggler-slider .toggler-knob:before {
+    opacity: 0.4;
+}
+
+.toggler-wrapper.style-2 input[type="checkbox"]:checked + .toggler-slider .toggler-knob:after {
+    opacity: 1;
+}
+
+.toggler-wrapper.style-2 .toggler-knob {
+    position: relative;
+    height: 100%;
+}
+
+.toggler-wrapper.style-2 .toggler-knob:before {
+    content: 'Off';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 75%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;
+}
+
+.toggler-wrapper.style-2 .toggler-knob:after {
+    content: 'On';
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 75%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;
+    opacity: 0.4;
+}
+
+
+/*! -------------------------------- III- Encryption.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) input container -------------------------------#1100ff */
+#Encryption {
+    background: url(../img/encryption.png), #081c3a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+}
+
+.Encryption-container {
+    margin-left: 50px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    padding: 10px;
+    width: 800px;
+    font-size: 25px;
+}
+
+.Encryption-result-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    letter-spacing: 2px;
+    padding: 7px 7px;
+    height: 300px;
+    width: 100%;
+
+}
+
+a {
+    color: #64ffda;
+}
+
+.Encryption-result-container #plaintxt {
+    word-wrap: break-word;
+    overflow-y: hidden;
+    height: 100%;
+    font-size: 30px;
+    padding: 5px;
+    background: #060f1c;
+    color: white;
+}
+
+.Encryption-result-container textarea::placeholder {
+    color: rgba(255, 255, 255, 0.584);
+}
+
+.Encryption-result-container textarea:focus {
+    border-color: #000000;
+}
+
+/*? -------------------------------- 2) output container -------------------------------#1100ff */
+.disabled {
+    display: none;
+}
+
+.Encryption-output-container {
+    margin-left: 50px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 2px 10px rgb(0, 0, 0);
+    padding: 10px;
+    width: 800px;
+    font-size: 25px;
+}
+
+.Encryption-output-result-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    letter-spacing: 2px;
+    padding: 7px 7px;
+    height: 340px;
+    width: 100%;
+}
+
+.Encryption-output-result-container #cipher {
+    word-wrap: break-word;
+    overflow-y: hidden;
+    height: 100%;
+    font-size: 30px;
+    padding: 5px;
+    color: white;
+}
+
+.Encryption-output-result-container #cipher:disabled {
+    background: #060f1c;
+}
+
+.Encryption-output-result-container textarea::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+/*! -------------------------------- IV- Deccryption.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) body -------------------------------#1100ff */
+#Decryption {
+    background: url(../img/decryption.png), #112240ef;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+}
+
+/*! -------------------------------- V- Form.html-----------------------------#ff0000 */
+#login {
+    background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px;
+    margin-top: 100px;
+    margin-left: 470px;
+}
+
+#register {
+    background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px;
+    margin-top: 100px;
+    margin-left: 470px;
+}
+
+#form {
+    color: white;
+    text-shadow: 0px 1px 1px rgb(0, 0, 0);
+    position: absolute;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    left: 120px;
+    top: 20%;
+    font-size: 55px;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 550px;
+}
+
+.login-form,
+.login-form * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro';
+}
+
+.login-form {
+    top: 50px !important;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.login-form__logo-container {
+    padding: 30px;
+    background: var(--bg-color);
+}
+
+.login-form__logo {
+    display: block;
+    max-width: 125px;
+    margin: 0 auto;
+}
+
+.login-form__content {
+    padding: 30px;
+    background: #eeeeee;
+}
+
+.login-form__header {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+.login-form__input {
+    width: 100% !important;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.login-form__input:focus {
+    border-color: var(--bg-color);
+}
+
+.login-form__input::placeholder {
+    color: #aaaaaa;
+}
+
+.login-form__button {
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background: var(--bg-color);
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form__button:active {
+    background: #64ffda;
+    color: #000000;
+}
+
+.login-form__links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-form__link {
+    font-size: 0.9em;
+    color: #008067;
+    text-decoration: none;
+}
+
+/*! -------------------------------- VI- passwordMan.html-----------------------------#ff0000 */
+#passman {
+    background: url(/static/img/passmanager.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.containerr {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 90%;
+}
+
+.action, th, td {
+    color: white;
+}
+
+.action {
+    font-size: 45px;
+}
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+.section:last-child:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+.section form{
+    display: inline;
+}
+button, input[type="submit"] {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid #64ffda;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--sec-color);
+    display: inline !important;
+}
+.button:hover ,input[type="submit"]:hover {
+    background-color: #64ffda;
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+.button:active ,input[type="submit"]:active {
+    background-color: #64ffdba1;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+input[type="text"], input[type="number"] {
+    line-height: 2;
+    width: 25%;
+    font-size: 18px;
+    margin: 5px;
+    padding-left: 5px;
+}
+
+table {
+    background-color: transparent;
+    margin: 10px;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 0.75rem 10px;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #0a192f;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: rgba(10, 25, 47, 0.4);
+}
