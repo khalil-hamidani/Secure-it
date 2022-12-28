@@ -17,7 +17,13 @@
 /*! ---- IV- Decryption.html -------- */
 /* ? 1) body */
 /*! ---- V- Form.html -------- */
+/* ? 1) form container */
 /*! ---- VI- PasswoedMan.html -------- */
+/* ? 1) body */
+/* ? 2) header */
+/* ? 3) table */
+/*! ---- VII- bad.html -------- */
+/* ? 1) body + error msg */
 
 /*! -------------------------------- I- index.html-----------------------------#ff0000 */
 /*? -------------------------------- 1) header -------------------------------#1100ff */
@@ -135,7 +141,8 @@ header {
 
 /*? -------------------------------- 2) first container -----------------------#1100ff */
 .firstContainer {
-    background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/main2.png);
+    /* background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/main.png); */
+    background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/user.png);
     background-repeat: no-repeat;
     height: 100vh;
     margin: 0 0;
@@ -970,6 +977,7 @@ a {
 }
 
 /*! -------------------------------- VI- passwordMan.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) body -------------------------------#1100ff */
 #passman {
     background: url(/static/img/passmanager.png);
     background-repeat: no-repeat;
@@ -992,6 +1000,84 @@ a {
     width: 90%;
 }
 
+/*? -------------------------------- 2) header -------------------------------#1100ff */
+#passman button, #passman input[type="submit"] {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid #64ffda;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--sec-color);
+    display: inline !important;
+}
+
+#passman .button:hover, #passman input[type="submit"]:hover {
+    background-color: #64ffda;
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+#passman td button:hover {
+    background-color: #64ffda;
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+.button:active, input[type="submit"]:active {
+    background-color: #64ffdba1;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+#passman input[type="text"] {
+    line-height: 2;
+    width: 28%;
+    font-size: 20px;
+    margin: 5px;
+    padding-left: 5px;
+    background-color: rgba(100, 255, 219, 0.8);
+    border-radius: 12px;
+    border: 3px black solid;
+}
+
+#passman input[type="text"]::placeholder {
+    color: #000000;
+}
+
+#passman input[type="password"] {
+    background-color: rgba(100, 255, 219, 0.8);
+    border-radius: 12px;
+    border: 3px black solid;
+    padding-left: 10px !important;
+}
+
+/*? -------------------------------- 3) table -------------------------------#1100ff */
+table {
+    background-color: transparent;
+    margin: 10px;
+    width: 100%;
+}
+
+table td {
+    padding: 0.75rem 10px;
+    vertical-align: middle;
+    font-size: 25px;
+
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #0a192f;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: rgba(10, 25, 47, 0.4);
+}
+
 .action, th, td {
     color: white;
 }
@@ -1011,10 +1097,25 @@ a {
     background-color: rgba(255, 255, 255, 0.05);
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
 }
-.section form{
+
+.section form {
     display: inline;
 }
-button, input[type="submit"] {
+
+/*! -------------------------------- VII- Bad.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) body + error msg --------------------#1100ff */
+#badmsg {
+    background: url(/static/img/bad.png);
+    background-size: cover;
+}
+
+#badmsg h1 {
+    font-size: 55px;
+    margin-top: 180px;
+    text-align: center;
+}
+
+#badmsg a {
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     border: 1px solid #64ffda;
     cursor: pointer;
@@ -1027,43 +1128,13 @@ button, input[type="submit"] {
     padding: 10px;
     background-color: var(--sec-color);
     display: inline !important;
+    position: absolute;
+    top: 45%;
+    left: 41%;
 }
-.button:hover ,input[type="submit"]:hover {
+
+#badmsg a:hover {
     background-color: #64ffda;
     color: #060f1c;
     border: 1px solid #000000;
-}
-
-.button:active ,input[type="submit"]:active {
-    background-color: #64ffdba1;
-    color: #000000;
-    border: 1px solid #000000;
-}
-
-input[type="text"], input[type="number"] {
-    line-height: 2;
-    width: 25%;
-    font-size: 18px;
-    margin: 5px;
-    padding-left: 5px;
-}
-
-table {
-    background-color: transparent;
-    margin: 10px;
-    width: 100%;
-}
-
-table th,
-table td {
-    padding: 0.75rem 10px;
-    vertical-align: middle;
-}
-
-tbody tr:nth-of-type(odd) {
-    background-color: #0a192f;
-}
-
-tbody tr:nth-of-type(even) {
-    background-color: rgba(10, 25, 47, 0.4);
 }

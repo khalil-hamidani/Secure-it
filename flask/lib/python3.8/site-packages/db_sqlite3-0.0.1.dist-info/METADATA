@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: db-sqlite3
+Version: 0.0.1
+Summary: sqlite3 driver for db
+Home-page: https://github.com/lgastako/db-sqlite3
+Author: John Evans
+Author-email: lgastako@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides: db_sqlite3
+Requires-Dist: db
+
+UNKNOWN
+
+

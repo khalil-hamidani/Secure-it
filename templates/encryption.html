@@ -1,0 +1,36 @@
+{% extends "template.html" %} 
+
+{% block title %}Secure iT{% endblock %} 
+
+{% block id %}Encryption{% endblock %} 
+
+{% block main %}
+
+<div class="Encryption-container">
+  <h2>
+    📝 Text Encryptor <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank"><small style="font-size: 20px"> --Using caesar cipher--</small></a>
+  </h2>
+  <div class="Encryption-result-container">
+    <textarea placeholder="Enter your Plaintext here ..." id="plaintxt" autofocus cols="150" rows="10"></textarea>
+  </div>
+  <div class="settings">
+    <div class="setting">
+      <label>Choose a key between 1 and 26</label>
+      <input type="number" id="length" style="margin-right: 15px" min="1" max="26" value="1" />
+    </div>
+  </div>
+  <button class="btn btn-large" id="generate">Encrypt Text 🛠️</button>
+</div>
+
+<div class="Encryption-output-container disabled">
+  <h2>Text Encrypted Successfully ✅</h2>
+  <div class="Encryption-output-result-container">
+    <textarea disabled id="cipher" cols="150" rows="18"></textarea>
+  </div>
+  <button class="btn btn-small" style="width: 380px; margin-top: 10px; margin-bottom: 10px" id="back">Back to Encryption 🛠️</button>
+  <button class="btn btn-small" style="width: 380px; margin-left: 15px" id="copy">Copy CipherText 📝</button>
+</div>
+
+<script src="/static/scripts/encryption.js"></script>
+
+{% endblock %}

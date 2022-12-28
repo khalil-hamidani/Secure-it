@@ -1,0 +1,26 @@
+{% extends "template.html" %} 
+
+{% block title %}Secure iT{% endblock %} 
+
+{% block id %}login{% endblock %} 
+
+{% block main %}
+
+<h1 id="form">Log In to your account to use the full features of Secure iT.</h1>
+<form class="login-form" action="/login" method="POST">
+  <div class="login-form__logo-container">
+    <a href="/"><img class="login-form__logo" src="/static/img/formlogo.png" alt="Logo" /></a>
+  </div>
+  <div class="login-form__content">
+    <div class="login-form__header">Log to your account</div>
+    <input class="login-form__input" autofocus required type="text" name="username" placeholder="Username" />
+    <input class="login-form__input" required type="password" name="password" placeholder="Password" />
+    <button class="login-form__button" required type="submit">Log In</button>
+    <div class="login-form__links"><span class="login-form__header">You don't have account ?</span><a class="login-form__link" href="/register"> Register</a></div>
+    <div class="login-form__links">
+      <a class="login-form__link" href="/"> Cancel </a>
+    </div>
+  </div>
+</form>
+
+{% endblock %}
