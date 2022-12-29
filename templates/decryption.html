@@ -1,10 +1,4 @@
-{% extends "template.html" %} 
-
-{% block title %}Secure iT{% endblock %}
-
-{% block id %}Decryption{% endblock %}
-
-{% block main %}
+{% extends "template.html" %} {% block title %}Secure iT{% endblock %} {% block id %}Decryption{% endblock %} {% block main %}
 
 <div class="Encryption-container">
   <h2>
@@ -14,9 +8,18 @@
     <textarea placeholder="Enter your CipherText here ..." id="plaintxt" autofocus cols="150" rows="10"></textarea>
   </div>
   <div class="settings">
-    <div class="setting">
+    <div id="hideifbrute" class="setting">
       <label>Choose a key between 1 and 26</label>
       <input type="number" id="length" style="margin-right: 15px" min="1" max="26" value="1" />
+    </div>
+    <div class="setting">
+      <label>Brute force (try all the keys)</label>
+      <label class="toggler-wrapper style-2">
+        <input type="checkbox" id="brute" />
+        <div class="toggler-slider">
+          <div class="toggler-knob"></div>
+        </div>
+      </label>
     </div>
   </div>
   <button class="btn btn-large" id="generate">Decrypt Text 🛠️</button>

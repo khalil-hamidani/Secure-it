@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+
+{% block title %}Secure iT{% endblock %}
+
+{% block id %}user_account{% endblock %}
+
+{% block main %}
+
+<h1>Welcome <span class="hi">{{user.name}}<span></h1>
+<h2>Your account has been created on :  <span class="hi">{{user.time}}<span></h2>
+<h3>You have <span class="hi">{{nbr}}</span> accounts saved on Secure iT</h3>
+
+<form action="/deleteAccount" method="post">
+    <input  type="hidden" name="id" value="{{user.id}}">
+    <input class="hi" type="submit" value="Delete acount">
+</form>
+<h4><span class="important">This action cannot be undone</span></h4>
+
+{% endblock %}

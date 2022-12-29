@@ -1,6 +1,6 @@
 function showpassword(id) {
     var input = document.getElementById(id);
-    var icon = document.getElementById("passwordIcon");
+    var icon = document.getElementById("a"+id);
     if (input.type === "password") {
       input.type = "text";
       icon.classList.remove("ri-lock-unlock-fill")

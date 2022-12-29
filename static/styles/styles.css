@@ -141,8 +141,7 @@ header {
 
 /*? -------------------------------- 2) first container -----------------------#1100ff */
 .firstContainer {
-    /* background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/main.png); */
-    background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/user.png);
+    background-image: linear-gradient(rgba(100, 255, 219, 0.009), rgba(100, 255, 219, 0.009)), url(../img/main.png);
     background-repeat: no-repeat;
     height: 100vh;
     margin: 0 0;
@@ -827,7 +826,6 @@ a {
 
 .Encryption-output-result-container #cipher {
     word-wrap: break-word;
-    overflow-y: hidden;
     height: 100%;
     font-size: 30px;
     padding: 5px;
@@ -857,7 +855,9 @@ a {
     padding: 10px;
     margin: 0;
 }
-
+.hiddenOpt{
+    display: none;
+}
 /*! -------------------------------- V- Form.html-----------------------------#ff0000 */
 #login {
     background: url(/static/img/form.png), rgba(10, 25, 47, 0.99);
@@ -1137,4 +1137,109 @@ tbody tr:nth-of-type(even) {
     background-color: #64ffda;
     color: #060f1c;
     border: 1px solid #000000;
+}
+
+/*! -------------------------------- VIII- account.html-----------------------------#ff0000 */
+/*? -------------------------------- 1) body  --------------------#1100ff */
+#user_account {
+    background: url(/static/img/user.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#user_account h1 {
+    position: absolute;
+    font-family: 'Montserrat';
+    z-index: 0;
+    text-align: center;
+    top: 25%;
+    left: 35%;
+    font-size: 4rem;
+    margin: auto;
+    margin-bottom: 25px;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+}
+#user_account span.hi {
+    color: #64ffda !important;
+    font-family: "Montserrat";
+}
+
+#user_account span.important {
+    color: rgb(200, 0, 0);
+
+}
+
+#user_account h2 {
+    font-family: 'Source Sans Pro';
+    padding: 0px;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    top: 40%;
+    left: 35%;
+    margin: auto auto;
+    font-size: 30px;
+    max-width: 900px;
+}
+
+#user_account h3 {
+    font-family: 'Source Sans Pro';
+    padding: 0px;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    top: 50%;
+    left: 35%;
+    margin: auto auto;
+    font-size: 30px;
+    max-width: 900px;
+
+}
+
+#user_account input.hi {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid #64ffda;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 42%;
+    top: 65%;
+    transform: translateX(-50%);
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.75rem;
+    width: 15rem;
+    padding: 0.5rem;
+    background-color: var(--sec-color);
+
+}
+
+#user_account input.hi:hover {
+    background-color: rgb(200, 0, 0);
+    color: #060f1c;
+    border: 1px solid #000000;
+}
+
+#user_account input.hi:active {
+    background-color: rgba(200, 0, 0, 0.5);
+    color: #000000;
+    border: 1px solid #000000;
+}
+#user_account h4 {
+    font-family: 'Source Sans Pro';
+    padding: 0px;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    top: 73%;
+    left: 35%;
+    margin: auto auto;
+    font-size: 15px;
+    max-width: 900px;
 }

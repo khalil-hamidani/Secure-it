@@ -1,11 +1,19 @@
 const encrypt = document.querySelector("#generate");
 const input = document.querySelector(".Encryption-container");
 const output = document.querySelector(".Encryption-output-container");
+const brute = document.getElementById("brute");
+const option = document.getElementById("hideifbrute");
 
 const back = document.querySelector("#back");
 const encrypted = document.querySelector("#cipher");
 
 let copy = document.querySelector("#copy");
+
+
+brute.addEventListener('change', function() {
+    option.classList.toggle("hiddenOpt")
+});
+
 
 encrypt.addEventListener("click", () => {
   let plainText = document.querySelector("#plaintxt").value;
@@ -13,7 +21,11 @@ encrypt.addEventListener("click", () => {
   if (plainText != "" && key <= 26 && key >= 1) {
     input.classList.add("disabled");
     output.classList.remove("disabled");
-    encrypted.value = decryptCaesarCipher(plainText, key);
+    if (brute.checked) {
+      encrypted.value = BruteDecryptCaesarCipher(plainText, key);
+    } else {
+      encrypted.value = decryptCaesarCipher(plainText, key);
+    }
     document.querySelector("#plaintxt").value = "";
   } else {
     if (plainText === "") {
@@ -60,6 +72,31 @@ function decryptCaesarCipher(encryptedText, shift) {
       const newChar = alphabet[newIndex];
       decryptedText += newChar;
     }
+  }
+  return decryptedText;
+}
+
+
+function BruteDecryptCaesarCipher(encryptedText) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const encryptedTextLowerCase = encryptedText.toLowerCase();
+  let decryptedText = "";
+
+  for (let shift = 1; shift <= 25; shift++) {
+    decryptedText += `Key ${shift}: `;
+    for (let i = 0; i < encryptedTextLowerCase.length; i++) {
+      const currentChar = encryptedTextLowerCase[i];
+      const currentIndex = alphabet.indexOf(currentChar);
+  
+      if (currentIndex === -1) {
+        decryptedText += currentChar;
+      } else {
+        const newIndex = (currentIndex - shift + 26) % 26;
+        const newChar = alphabet[newIndex];
+        decryptedText += newChar;
+      }
+    }
+    decryptedText += "\n";
   }
 
   return decryptedText;

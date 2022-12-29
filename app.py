@@ -7,7 +7,6 @@ from cs50 import SQL
 app = Flask(__name__)
 
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -22,35 +21,51 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+
 @app.route("/")
 def index():
-    return render_template("index.html",nav=True)
+    user = "Account"
+    if session.get("user_id"):
+        user = db.execute("SELECT name FROM users WHERE id = ?",session["user_id"])[0]
+    return render_template("index.html",nav=True,user=user)
 
 
 @app.route("/encryption")
 @login_required
 def encryption():
-    return render_template("encryption.html",nav=True)
+    user = "Account"
+    if session.get("user_id"):
+        user = db.execute("SELECT name FROM users WHERE id = ?",session["user_id"])[0]
+    return render_template("encryption.html",nav=True,user=user)
 
 
 @app.route("/decryption")
 @login_required
 def decryption():
-    return render_template("decryption.html",nav=True)
+    user = "Account"
+    if session.get("user_id"):
+        user = db.execute("SELECT name FROM users WHERE id = ?",session["user_id"])[0]
+    return render_template("decryption.html",nav=True,user=user)
 
 
 @app.route("/passwordGen")
 @login_required
 def passwordGen():
-    return render_template("passwordsGen.html",nav=True)
+    user = "Account"
+    if session.get("user_id"):
+        user = db.execute("SELECT name FROM users WHERE id = ?",session["user_id"])[0]
+    return render_template("passwordsGen.html",nav=True,user=user)
 
 
 @app.route("/passwordMan",methods=["GET", "POST"])
 @login_required
 def passwordMan():
+    user = "Account"
+    if session.get("user_id"):
+        user = db.execute("SELECT name FROM users WHERE id = ?",session["user_id"])[0]
     if request.method == "GET":
         accounts = db.execute("SELECT * FROM passwords WHERE user_id = ?",session["user_id"])
-        return render_template("passwordMan.html",nav=True,accounts=accounts)
+        return render_template("passwordMan.html",nav=True,accounts=accounts,user=user)
     else:
         accountName = request.form.get("name")
         accountPassword = request.form.get("password")
@@ -120,6 +135,7 @@ def logout():
     session.clear()
     return redirect("/")
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "GET":
@@ -142,7 +158,27 @@ def register():
         session["user_id"] = db.execute("SELECT id FROM users WHERE name = ?",username)[0]["id"]
         return redirect("/")
         
-         
+
+@app.route("/user")
+@login_required
+def user():
+    user = "Account"
+    if session.get("user_id"):
+        user = db.execute("SELECT * FROM users WHERE id = ?",session["user_id"])[0]
+        nbr = len(db.execute("SELECT * FROM passwords WHERE user_id = ?",session["user_id"]))
+    return render_template("user.html",nav=True,user=user,nbr=nbr)
+
+
+@app.route("/deleteAccount", methods=["POST"])
+def deleteAccount():
+    if request.method == "POST":
+        id = request.form.get("id")
+        if id :
+            db.execute("DELETE FROM passwords WHERE user_id = ?;",session["user_id"])
+            db.execute("DELETE FROM users WHERE id = ?;",session["user_id"])
+            session.clear()
+        return redirect("/")
+
 def error(msg):
     return render_template("bad.html",msg=msg)
 

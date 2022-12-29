@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/static/img/ico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="/static/styles/styles.css" />
@@ -22,15 +23,15 @@
         <img src="static/img/logo.png" alt="Logo" width="80" />
         <span>Secure iT</span></a>
       <ul class="navbar">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/encryption">Encryption</a></li>
-        <li><a href="decryption">Decryption</a></li>
-        <li><a href="/passwordGen">Password Generator</a></li>
-        <li><a href="/passwordMan">Password manager</a></li>
+        <li><a class=" 11" href="/">Home</a></li>
+        <li><a class="11" href="/encryption">Encryption</a></li>
+        <li><a class="11" href="decryption">Decryption</a></li>
+        <li><a class="11" href="/passwordGen">Password Generator</a></li>
+        <li><a class="11" href="/passwordMan">Password manager</a></li>
       </ul>
       {% if session["user_id"] %}
       <div class="main">
-        <a href="/" class="user"><i class="ri-account-box-fill"></i>Account</a>
+        <a href="/user" class="user"><i class="ri-account-box-fill"></i>{{user.name}}</a>
         <a href="/logout" class="user"><i class="ri-logout-box-r-fill"></i>Log out</a>
       </div>
       {% else %}
@@ -42,5 +43,6 @@
     </header>
     {% endif %}
     {% block main %} {% endblock %}
+    <script src="/static/scripts/global.js"></script>
   </body>
 </html>
