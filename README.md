@@ -36,7 +36,7 @@ Data is stored and retrieved from a backend server with database using Flask: `a
 
 ## Pictures
 
-|                         Login                         |
+|                         Main page                         |
 | :---------------------------------------------------: |
 | <img src="/static/img/screen1.png" width="800"> |
 
@@ -44,17 +44,27 @@ Data is stored and retrieved from a backend server with database using Flask: `a
 
 |                         Login                         |                       register                        |
 | :---------------------------------------------------: | :---------------------------------------------------: |
-| <img src="/static/img/screen2.png" width="400"> | <img src="/static/img/screenshots/screen3.png" width="400"> |
+| <img src="/static/img/screen2.png" width="400"> | <img src="/static/img/screen3.png" width="400"> |
 
-- Homepage and Responsive show case
+- Encryption and Decryption show case
 
 |                      Encryption                       |                         Result                          |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
-| <img src="/static/img/screenshots/screen4.png" width="400"> | <img src="/static/img/screenshots/screen5.png" width = "400"> |
+| <img src="/static/img/screen4.png" width="400"> | <img src="/static/img/screen5.png" width = "400"> |
 
 |                      Decryption                       |                         Result                          |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
-| <img src="/static/img/screenshots/screen6.png" width="400"> | <img src="/static/img/screenshots/screen7.png" width = "400"> |
+| <img src="/static/img/screen6.png" width="400"> | <img src="/static/img/screen7.png" width = "400"> |
+
+- password Generator an password manager show case
+
+|                      Password Generator                       |                         Result                          |
+| :---------------------------------------------------: | :-----------------------------------------------------: |
+| <img src="/static/img/screen8.png" width="400"> | <img src="/static/img/screen9.png" width = "400"> |
+
+|                      Password Manager                       |                         Result                          |
+| :---------------------------------------------------: | :-----------------------------------------------------: |
+| <img src="/static/img/screen10.png" width="400"> | <img src="/static/img/screen11.png" width = "400"> |
 
 ## About CS50
 
