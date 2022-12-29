@@ -38,23 +38,23 @@ Data is stored and retrieved from a backend server with database using Flask: `a
 
 |                         Login                         |
 | :---------------------------------------------------: |
-| <img src="/static/img/screenshots/1.png" width="600"> |
+| <img src="/static/img/screen1.png" width="800"> |
 
 - Login and Register page
 
 |                         Login                         |                       register                        |
 | :---------------------------------------------------: | :---------------------------------------------------: |
-| <img src="/static/img/screenshots/2.png" width="400"> | <img src="/static/img/screenshots/3.png" width="400"> |
+| <img src="/static/img/screen2.png" width="400"> | <img src="/static/img/screenshots/screen3.png" width="400"> |
 
 - Homepage and Responsive show case
 
 |                      Encryption                       |                         Result                          |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
-| <img src="/static/img/screenshots/3.png" width="400"> | <img src="/static/img/screenshots/4.png" width = "400"> |
+| <img src="/static/img/screenshots/screen4.png" width="400"> | <img src="/static/img/screenshots/screen5.png" width = "400"> |
 
 |                      Decryption                       |                         Result                          |
 | :---------------------------------------------------: | :-----------------------------------------------------: |
-| <img src="/static/img/screenshots/5.png" width="400"> | <img src="/static/img/screenshots/6.png" width = "400"> |
+| <img src="/static/img/screenshots/screen6.png" width="400"> | <img src="/static/img/screenshots/screen7.png" width = "400"> |
 
 ## About CS50
 
