@@ -223,23 +223,25 @@ The function first retrieves the name of the logged-in user from the database. I
 
 If the request method is "POST", the function gets the values of the "name", "password", and "link" form fields and checks if they are all present. If any of them is missing, the function returns an error message. Otherwise, it inserts the values into the "passwords" table in the database and redirects the user back to the "/passwordMan" URL.
 
-## Running 
+## Running
 
 To run and test the Application on your localhost, execute this command on your terminal after forking the repository
 
 ```bash
   ./commands.bash
 ```
+
 OR
+
 ```bash
   python3 app.py
 ```
+
 Wich will run the flask app on `http://127.0.0.1:5000`
-## About CS50
 
-CS50 is a openware course from Havard University and taught by David J. Malan
+## Course description
 
-Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, and software engineering. Languages include C, Python, and SQL plus students’ choice of: HTML, CSS, and JavaScript (for web development).
+This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course.
 
 Thank you for all CS50.
 
