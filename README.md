@@ -1,7 +1,7 @@
 # **Secue iT**
 
 - CS50 final project by [HavardX](https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0)
-- You can find my Video Demo [here 🔗](https://www.youtube.com)
+- You can find my Video Demo [here 🔗](https://youtu.be/QauGfL4t2Fs)
   ![Logo](/static/img/widelogo.png)
 
 ## Description
