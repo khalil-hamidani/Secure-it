@@ -3,6 +3,7 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from helpers import login_required
 from cs50 import SQL
+import re
 
 app = Flask(__name__)
 
@@ -12,6 +13,8 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 db = SQL("sqlite:///secure.db")
+pass_pat = re.compile(r"[A-Za-z0-9]+") #! To avoid SQL injections
+user_pat = re.compile(r"[A-Za-z0-9]+\_?[A-Za-z0-9]") #! To avoid SQL injections
 
 @app.after_request
 def after_request(response):
@@ -150,6 +153,10 @@ def register():
             return error("No Password is providedd !")
         elif not check or password != check:
             return error("passwords are not matched !")
+        elif not re.fullmatch(pass_pat, password):
+            return error("Invalid password !")
+        elif not re.fullmatch(user_pat, username):
+            return error("Invalid user name !")
         exist = db.execute("SELECT name FROM users WHERE name = ?",username)
         if len(exist) > 0:
             return error("user name already exists")
