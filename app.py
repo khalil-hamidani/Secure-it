@@ -125,6 +125,10 @@ def login():
             return error("No user name is providedd !")
         elif not password:
             return error("No Password is providedd !")
+        elif not re.fullmatch(pass_pat, password):
+            return error("Invalid password 🤨 !")
+        elif not re.fullmatch(user_pat, username):
+            return error("Invalid user name 🤨 !")
         exist = db.execute("SELECT * FROM users WHERE name = ?",username)
         if len(exist) < 1 or not check_password_hash(exist[0]["hash"],password):
             return error("invalid username or password !")
@@ -154,9 +158,9 @@ def register():
         elif not check or password != check:
             return error("passwords are not matched !")
         elif not re.fullmatch(pass_pat, password):
-            return error("Invalid password !")
+            return error("Invalid password 🤨 !")
         elif not re.fullmatch(user_pat, username):
-            return error("Invalid user name !")
+            return error("Invalid user name 🤨 !")
         exist = db.execute("SELECT name FROM users WHERE name = ?",username)
         if len(exist) > 0:
             return error("user name already exists")
