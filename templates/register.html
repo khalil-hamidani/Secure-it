@@ -12,9 +12,9 @@
   </div>
   <div class="login-form__content">
     <div class="login-form__header">Register for a new account</div>
-    <input class="login-form__input" type="text" autofocus autocomplete="off" name="username" placeholder="Username" />
-    <input class="login-form__input" type="password" name="password" placeholder="Password" />
-    <input class="login-form__input" type="password" name="check" placeholder="Confirm Password" />
+    <input class="login-form__input" type="text" autofocus autocomplete="off" name="username" pattern="[A-Za-z0-9]+\_?[A-Za-z0-9]+" placeholder="Username" />
+    <input class="login-form__input" type="password" name="password" pattern="[A-Za-z0-9]+" placeholder="Password" />
+    <input class="login-form__input" type="password" name="check" pattern="[A-Za-z0-9]+" placeholder="Confirm Password" />
     <button class="login-form__button" type="submit">Register</button>
     <div class="login-form__links"><span class="login-form__header">Already have account ?</span>
       <a class="login-form__link" href="/login"> Log In</a>
