@@ -1,10 +1,10 @@
-# **Secue iT**
+# **secure iT**
 
-- CS50 final project by [HavardX](https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0)
+- CS50 final project by [HarvardX](https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0)
 - You can find my Video Demo [here 🔗](https://youtu.be/QauGfL4t2Fs)
   ![Logo](/static/img/widelogo.png)
 
-## Description
+## Description:
 
 Secure it is a cybersecurity web application that provides several features to help users protect their online accounts and data.
 
@@ -16,7 +16,7 @@ In addition to the password generator, Secure It also includes a **Password Mana
 
 Overall, Secure It is a useful tool for users who want to protect their online accounts and data by using strong passwords and encrypted communication.
 
-## Tools
+## Tools:
 
 - **HTML** : used to define the structure and layout of a web page, including the text, images, and other media that it contains.
 - **CSS** : used to control the appearance of elements on a web page, including the colors, fonts, layout, and other visual properties.
@@ -24,7 +24,7 @@ Overall, Secure It is a useful tool for users who want to protect their online a
 - **Python** :(**Flask framework**) used as the backend for web applications, meaning that it runs on a server and handles the server-side logic and processing for the app.
 - **SQL** : used as a database management system for the application.
 
-## Implementation
+## Implementation:
 
 The app is structured using HTML elements to define the layout and content of the various pages , there are 11 html Files stored in the templates folder for the whole project: `index.html` for the landing page , `login.html` and `register.html` for login and register forms and `encryption.html`, `decryption.html`, `passwordGen.html`, `passwordMan.html` for the main features of the the app. `user.html`, `bad.html` for showing the user account and error messages, and finally the `template.html` is the file where all the previous files are extended from it using the **jinja2** syntax
 
@@ -32,9 +32,9 @@ CSS is used to style the app, including the layout, fonts, colors, and other vis
 
 JavaScript is used to implement the core functionality of the app, including the Caesar cipher encryption and decryption algorithms in the `encryption.js` and `decryption.js` files one the static folder, the password generator, and the password manager in the `passGen.js` and `passMan.js`.
 
-Data is stored and retrieved from a backend server with database using Flask: `app.py` is the main python script that allwos users to sign in , log in and store there passwords inside the datatbase stored in `secure.db`
+Data is stored and retrieved from a backend server with database using Flask: `app.py` is the main python script that allows users to sign in , log in and store there passwords inside the database stored in `secure.db`
 
-## Pictures
+## Pictures:
 
 |                    Main page                    |
 | :---------------------------------------------: |
@@ -66,9 +66,9 @@ Data is stored and retrieved from a backend server with database using Flask: `a
 | :----------------------------------------------: | :------------------------------------------------: |
 | <img src="/static/img/screen10.png" width="400"> | <img src="/static/img/screen11.png" width = "400"> |
 
-## Algorithms
+## Algorithms:
 
-### Encryption
+### Encryption:
 
 ```javascript
 function encryptCaesarCipher(plainText, shift) {
@@ -107,7 +107,7 @@ const encryptedText = encryptCaesarCipher(plainText, shift);
 console.log(encryptedText); // Output: "khoor, zruog!"
 ```
 
-### Decryption
+### Decryption:
 
 ```javaScript
 function decryptCaesarCipher(encryptedText, shift) {
@@ -145,7 +145,7 @@ const decryptedText = decryptCaesarCipher(encryptedText, shift);
 console.log(decryptedText); // Output: "hello, world!"
 ```
 
-### Password Generator
+### Password Generator:
 
 ```javascript
 function generatePassword(lower, upper, number, symbol, length) {
@@ -188,7 +188,7 @@ const password = generatePassword(lower, upper, number, symbol, length);
 console.log(password); // Output: a random password of length 20 that includes lowercase letters, uppercase letters, and numbers
 ```
 
-### Password Manager
+### Password Manager:
 
 ```python
 @app.route("/passwordMan",methods=["GET", "POST"])
@@ -205,11 +205,11 @@ def passwordMan():
         accountPassword = request.form.get("password")
         accountLink = request.form.get("link")
         if not accountName:
-            return error("No account name is providedd !")
+            return error("No account name is provided !")
         elif not accountPassword:
-            return error("No account Password is providedd !")
+            return error("No account Password is provided !")
         elif not accountLink:
-            return error("No account Link is providedd !")
+            return error("No account Link is provided !")
         db.execute("INSERT INTO passwords (user_id,name,link,password) VALUES (?,?,?,?);",session["user_id"],accountName,
           accountLink,accountPassword)
         return redirect("/passwordMan")
@@ -223,12 +223,12 @@ The function first retrieves the name of the logged-in user from the database. I
 
 If the request method is "POST", the function gets the values of the "name", "password", and "link" form fields and checks if they are all present. If any of them is missing, the function returns an error message. Otherwise, it inserts the values into the "passwords" table in the database and redirects the user back to the "/passwordMan" URL.
 
-## Running
+## Running:
 
 To run and test the Application on your localhost, execute this command on your terminal after forking the repository
 
 ```bash
-  ./comands.bash
+  ./commands.bash
 ```
 
 OR
@@ -237,9 +237,9 @@ OR
   python3 app.py
 ```
 
-Wich will run the flask app on `http://127.0.0.1:5000`
+Which will run the flask app on `http://127.0.0.1:5000`
 
-## Course description
+## Course description:
 
 This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course.
 
