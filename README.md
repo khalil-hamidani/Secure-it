@@ -245,4 +245,4 @@ This is CS50x , Harvard University's introduction to the intellectual enterprise
 
 Thank you for all CS50.
 
-Where I get CS50 course? [https://cs50.harvard.edu/x/2022/](https://cs50.harvard.edu/x/2022/)
+Where I get CS50 course? [https://cs50.harvard.edu/x/2022/](https://cs50.harvard.edu/x/2022/).
