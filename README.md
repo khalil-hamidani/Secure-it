@@ -228,7 +228,7 @@ If the request method is "POST", the function gets the values of the "name", "pa
 To run and test the Application on your localhost, execute this command on your terminal after forking the repository
 
 ```bash
-  ./commands.bash
+  ./comands.bash
 ```
 
 OR
