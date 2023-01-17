@@ -14,7 +14,7 @@ Secure It also includes a **Password Generator**, which can be used to create st
 
 In addition to the password generator, Secure It also includes a **Password Manager** feature. This allows users to store their login credentials for different online accounts in a secure location.
 
-Overall, Secure It is a useful tool for users who want to protect their online accounts and data by using strong passwords and encrypted communication.
+Overall, Secure It is a useful tool for users who want to protect their online accounts and data by using **strong passwords** and **encrypted communication**.
 
 ## Tools:
 
