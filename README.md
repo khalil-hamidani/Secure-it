@@ -26,7 +26,7 @@ Overall, Secure It is a useful tool for users who want to protect their online a
 
 ## Implementation:
 
-The app is structured using HTML elements to define the layout and content of the various pages , there are 11 html Files stored in the templates folder for the whole project: `index.html` for the landing page , `login.html` and `register.html` for login and register forms and `encryption.html`, `decryption.html`, `passwordGen.html`, `passwordMan.html` for the main features of the the app. `user.html`, `bad.html` for showing the user account and error messages, and finally the `template.html` is the file where all the previous files are extended from it using the **jinja2** syntax
+The app is structured using HTML elements to define the layout and content of the various pages , there are 11 html Files stored in the templates folder for the whole project: `index.html` for the landing page , `login.html` and `register.html` for login and register forms and `encryption.html`, `decryption.html`, `passwordGen.html`, `passwordMan.html` for the main features of the the app. `user.html`, `bad.html` for showing the user account and error messages, and finally the `template.html` is the file where all the previous files are extended from it using the **jinja2** syntax.
 
 CSS is used to style the app, including the layout, fonts, colors, and other visual elements all inside `styles.css` file in the static folder.
 
